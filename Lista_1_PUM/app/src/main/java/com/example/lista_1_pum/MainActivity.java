@@ -53,5 +53,36 @@ public class MainActiovity extends AppCompatActivity{
         });
     }
 
+    private void initializeQuestions() {
+        questionList=new ArrayList<>();
+        questionList.add(new Question("2+2",
+            new String[]{"4","5","6","7"}, 1));
+        questionList.add(new Question("3+3",
+                new String[]{"5","6","7","8"},2));
+        questionList.add(new Question("3+3",
+                new String[]{"5","6","7","8"},2));
+        questionList.add(new Question("3+3",
+                new String[]{"5","6","7","8"},2));
+        questionList.add(new Question("3+3",
+                new String[]{"5","6","7","8"},2));
+        questionList.add(new Question("3+3",
+                new String[]{"5","6","7","8"},2));
+        questionList.add(new Question("3+3",
+                new String[]{"5","6","7","8"},2));
+        questionList.add(new Question("3+3",
+                new String[]{"5","6","7","8"},2));
+        questionList.add(new Question("3+3",
+                new String[]{"5","6","7","8"},2));
+        questionList.add(new Question("3+3",
+                new String[]{"5","6","7","8"},2));
+    }
+    Private void loadQuestion(){
+        radioGroup.clearCheck();
+        Question currentQuestion=questionList.get(currentQuestonIndex);
+        tvQuestion.setText(currentQuestion.getQuestionText());
+        String[] options=currentQuestion.getOptions();
+        rbOption1.setText(option[0]);
+        rbOption2.
+    }
 
 }
