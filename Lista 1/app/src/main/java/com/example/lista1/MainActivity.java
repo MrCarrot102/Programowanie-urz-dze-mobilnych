@@ -79,32 +79,31 @@ public class MainActivity extends AppCompatActivity {
         return questions;
     }
 
-    // Display the current question
+
     private void displayQuestion() {
         Question currentQuestion = questionList.get(currentQuestionIndex);
         questionText.setText(currentQuestion.getQuestion());
 
-        // Update the question counter
+
         questionnumber.setText("Pytanie: " + (currentQuestionIndex + 1) + "/" + questionList.size());
 
-        // Update answers
+
         for (int i = 0; i < answersGroup.getChildCount(); i++) {
             RadioButton radioButton = (RadioButton) answersGroup.getChildAt(i);
             radioButton.setText(currentQuestion.getAnswers()[i]);
         }
 
-        // Update progress bar
         progressBar.setProgress((int) ((currentQuestionIndex + 1) / (float) questionList.size() * 100));
 
-        // Clear previous answer selection
+
         answersGroup.clearCheck();
     }
 
-    // Display result after quiz ends
+
     private void showResult() {
         questionText.setText("Gratulacje! Zdobyłeś " + score + " pkt");
-        nextButton.setVisibility(View.GONE); // Hide button after completion
-        answersGroup.setVisibility(View.GONE); // Hide answer options
-        questionnumber.setVisibility(View.GONE); // Hide question counter
+        nextButton.setVisibility(View.GONE); 
+        answersGroup.setVisibility(View.GONE);
+        questionnumber.setVisibility(View.GONE);
     }
 }
