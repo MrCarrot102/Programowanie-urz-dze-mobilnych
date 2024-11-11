@@ -7,7 +7,7 @@ public class UserManager {
 
     public UserManager() {
         users = new ArrayList<>();
-        // Dodaj 5 przykładowych użytkowników
+        // 5 przykladowych uzytkownikow
         users.add(new User("user1", "password1"));
         users.add(new User("user2", "password2"));
         users.add(new User("user3", "password3"));
