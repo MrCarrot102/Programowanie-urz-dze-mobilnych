@@ -23,7 +23,7 @@ public class FragmentC extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentCBinding.inflate(inflater, container, false);
 
-        // Przycisk logowania
+        // przycisk do logowania
         binding.loginButton.setOnClickListener(view -> {
             String username = binding.loginUsername.getText().toString();
             String password = binding.loginPassword.getText().toString();
@@ -31,15 +31,15 @@ public class FragmentC extends Fragment {
             if (username.isEmpty() || password.isEmpty()) {
                 Toast.makeText(getActivity(), "Wypełnij wszystkie pola", Toast.LENGTH_SHORT).show();
             } else {
-                // Przejście do ekranu powitalnego (FragmentD) z przekazaniem argumentu
+                // przejscie do fragmentu D z przekazaniem danych username
                 NavDirections action = FragmentCDirections.actionFragmentCToFragmentD(username);
                 Navigation.findNavController(view).navigate(action);
             }
         });
 
-        // Przycisk rejestracji
+        //  przycisk odpowiedziakny za rejestracje
         binding.registerButtonInLogin.setOnClickListener(view -> {
-            // Przejście do ekranu rejestracji (FragmentB)
+            // przycisk przechodzenia do fragment B rejestracja
             NavDirections action = FragmentCDirections.actionFragmentCToFragmentB();
             Navigation.findNavController(view).navigate(action);
         });
