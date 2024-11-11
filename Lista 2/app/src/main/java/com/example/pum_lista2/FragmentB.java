@@ -23,7 +23,7 @@ public class FragmentB extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentBBinding.inflate(inflater, container, false);
 
-        // Przycisk rejestracji
+        // przycisk do rejestracji uzytkownika
         binding.registerButton.setOnClickListener(view -> {
             String username = binding.registerUsername.getText().toString();
             String password = binding.registerPassword.getText().toString();
@@ -34,9 +34,7 @@ public class FragmentB extends Fragment {
             } else if (!password.equals(confirmPassword)) {
                 Toast.makeText(getActivity(), "Hasła nie pasują", Toast.LENGTH_SHORT).show();
             } else {
-                // Dodaj logikę dodawania użytkownika tutaj
-
-                // Przejście do ekranu logowania
+                // przejscie do ekranu logowania
                 NavDirections action = FragmentBDirections.actionFragmentBToFragmentC();
                 Navigation.findNavController(view).navigate(action);
             }

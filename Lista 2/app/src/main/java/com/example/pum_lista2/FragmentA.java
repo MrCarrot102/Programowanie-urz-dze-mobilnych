@@ -22,13 +22,13 @@ public class FragmentA extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentABinding.inflate(inflater, container, false);
 
-        // Przycisk "Zaloguj się" - nawigacja do FragmentC
+        // przycisk do logowania i nawigacja do fragmentu C
         binding.loginButton.setOnClickListener(view -> {
             NavDirections action = FragmentADirections.actionFragmentAToFragmentC();
             Navigation.findNavController(view).navigate(action);
         });
 
-        // Przycisk "Zarejestruj" - nawigacja do FragmentB
+        // przycisk zarejestruj i nawigacja do fragmentu b
         binding.registerButton.setOnClickListener(view -> {
             NavDirections action = FragmentADirections.actionFragmentAToFragmentB();
             Navigation.findNavController(view).navigate(action);
