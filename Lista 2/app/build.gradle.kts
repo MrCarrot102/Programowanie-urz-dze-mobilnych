@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.lista2"
+    namespace = "com.example.pum_lista2"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.lista2"
+        applicationId = "com.example.pum_lista2"
         minSdk = 28
         targetSdk = 34
         versionCode = 1
@@ -26,14 +26,15 @@ android {
             )
         }
     }
-
-    buildFeatures{
-        viewBinding = true
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
 }
 
 dependencies {
