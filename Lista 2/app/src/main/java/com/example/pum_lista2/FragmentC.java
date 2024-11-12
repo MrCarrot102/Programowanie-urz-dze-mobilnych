@@ -6,7 +6,6 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 import com.example.pum_lista2.databinding.FragmentCBinding;
 
 public class FragmentC extends Fragment {
@@ -27,24 +26,19 @@ public class FragmentC extends Fragment {
             String username = binding.loginUsername.getText().toString();
             String password = binding.loginPassword.getText().toString();
 
-            if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(getActivity(), "Wypełnij wszystkie pola", Toast.LENGTH_SHORT).show();
-            } else {
-                // Inicjalizacja instancji UserManager
+            if (username.isEmpty() || password.isEmpty()) {}
+            else {
+              // instrukcja usermanager
                 UserManager userManager = UserManager.getInstance();
 
-                // Walidacja danych logowania
+                // sprawdzanie danych uzytkownika
                 if (userManager.validateLogin(username, password)) {
-                    // Jeśli login jest poprawny, przejdź do FragmentD (ekran powitalny)
+                    // jesli jest poprawny login i haslo to przejscie do ostatniego fragmentu
                     NavDirections action = FragmentCDirections.actionFragmentCToFragmentD(username);
                     Navigation.findNavController(view).navigate(action);
-                } else {
-                    // Jeśli login jest niepoprawny, pokaż komunikat o błędzie
-                    Toast.makeText(getActivity(), "Niepoprawna nazwa użytkownika lub hasło", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
         // przycisk odpowiedzialny za rejestrację
         binding.registerButtonInLogin.setOnClickListener(view -> {
             // przejście do fragmentu rejestracji (FragmentB)
