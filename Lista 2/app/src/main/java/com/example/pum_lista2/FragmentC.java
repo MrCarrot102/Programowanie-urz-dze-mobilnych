@@ -1,5 +1,4 @@
 package com.example.pum_lista2;
-
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavDirections;
@@ -31,15 +30,24 @@ public class FragmentC extends Fragment {
             if (username.isEmpty() || password.isEmpty()) {
                 Toast.makeText(getActivity(), "Wypełnij wszystkie pola", Toast.LENGTH_SHORT).show();
             } else {
-                // przejscie do fragmentu D z przekazaniem danych username
-                NavDirections action = FragmentCDirections.actionFragmentCToFragmentD(username);
-                Navigation.findNavController(view).navigate(action);
+                // Inicjalizacja instancji UserManager
+                UserManager userManager = UserManager.getInstance();
+
+                // Walidacja danych logowania
+                if (userManager.validateLogin(username, password)) {
+                    // Jeśli login jest poprawny, przejdź do FragmentD (ekran powitalny)
+                    NavDirections action = FragmentCDirections.actionFragmentCToFragmentD(username);
+                    Navigation.findNavController(view).navigate(action);
+                } else {
+                    // Jeśli login jest niepoprawny, pokaż komunikat o błędzie
+                    Toast.makeText(getActivity(), "Niepoprawna nazwa użytkownika lub hasło", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
-        //  przycisk odpowiedziakny za rejestracje
+        // przycisk odpowiedzialny za rejestrację
         binding.registerButtonInLogin.setOnClickListener(view -> {
-            // przycisk przechodzenia do fragment B rejestracja
+            // przejście do fragmentu rejestracji (FragmentB)
             NavDirections action = FragmentCDirections.actionFragmentCToFragmentB();
             Navigation.findNavController(view).navigate(action);
         });

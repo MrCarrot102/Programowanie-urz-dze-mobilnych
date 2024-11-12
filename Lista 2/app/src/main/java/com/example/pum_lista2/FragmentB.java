@@ -15,7 +15,7 @@ public class FragmentB extends Fragment {
     private FragmentBBinding binding;
 
     public FragmentB() {
-        // Required empty public constructor
+        // Wymagany pusty konstruktor publiczny
     }
 
     @Override
@@ -23,7 +23,7 @@ public class FragmentB extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentBBinding.inflate(inflater, container, false);
 
-        // przycisk do rejestracji uzytkownika
+        // przycisk do rejestracji użytkownika
         binding.registerButton.setOnClickListener(view -> {
             String username = binding.registerUsername.getText().toString();
             String password = binding.registerPassword.getText().toString();
@@ -34,9 +34,19 @@ public class FragmentB extends Fragment {
             } else if (!password.equals(confirmPassword)) {
                 Toast.makeText(getActivity(), "Hasła nie pasują", Toast.LENGTH_SHORT).show();
             } else {
-                // przejscie do ekranu logowania
-                NavDirections action = FragmentBDirections.actionFragmentBToFragmentC();
-                Navigation.findNavController(view).navigate(action);
+                // Pobranie instancji UserManager i dodanie nowego użytkownika
+                UserManager userManager = UserManager.getInstance(); // założenie, że UserManager jest singletonem
+
+                boolean isAdded = userManager.addUser(username, password);
+                if (isAdded) {
+                    Toast.makeText(getActivity(), "Rejestracja zakończona sukcesem!", Toast.LENGTH_SHORT).show();
+                    // Przejście do ekranu logowania
+                    NavDirections action = FragmentBDirections.actionFragmentBToFragmentC();
+                    Navigation.findNavController(view).navigate(action);
+                } else {
+                    // Jeśli użytkownik o takiej nazwie już istnieje
+                    Toast.makeText(getActivity(), "Użytkownik już istnieje!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
