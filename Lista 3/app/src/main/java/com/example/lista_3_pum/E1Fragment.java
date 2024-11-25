@@ -36,7 +36,7 @@ public class E1Fragment extends Fragment {
         taskList.add(new TaskList("Fizyka", 1, 5, 5));
         taskList.add(new TaskList("Fizyka", 2, 4.0, 3));
         // Ustawienie adaptera
-        taskListAdapter = new TaskListAdapter(taskList);
+        taskListAdapter = new TaskListAdapter(taskList);x
         recyclerView.setAdapter(taskListAdapter);
 
         return rootView;
