@@ -28,11 +28,13 @@ public class E1Fragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         // Przykładowe dane
-        taskList = new ArrayList<>();
-        taskList.add(new TaskList("Matematyka", "5", 5));
-        taskList.add(new TaskList("Fizyka", "3", 3));
-        taskList.add(new TaskList("Chemia", "7", 4));
-
+        List<TaskList> taskList = new ArrayList<>();
+        taskList.add(new TaskList("Matematyka", 1, 3.5, 10));
+        taskList.add(new TaskList("Matematyka", 2, 5.4, 10));
+        taskList.add(new TaskList("PUM", 1, 5.0, 1));
+        taskList.add(new TaskList("PUM", 2, 5.0, 1));
+        taskList.add(new TaskList("Fizyka", 1, 5, 5));
+        taskList.add(new TaskList("Fizyka", 2, 4.0, 3));
         // Ustawienie adaptera
         taskListAdapter = new TaskListAdapter(taskList);
         recyclerView.setAdapter(taskListAdapter);

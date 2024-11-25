@@ -39,7 +39,7 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.TaskLi
         holder.subjectNameTextView.setText(task.getSubjectName());
         holder.gradeTextView.setText("Ocena: " + task.getGrade());
         holder.numberOfTasksTextView.setText("Liczba zadań: " + task.getNumberOfTasks());
-
+        holder.listNameTextView.setText("Lista " + task.getListNumber());
     }
 
     @Override
@@ -48,13 +48,14 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.TaskLi
     }
 
     public static class TaskListViewHolder extends RecyclerView.ViewHolder {
-        TextView subjectNameTextView, gradeTextView, numberOfTasksTextView;
+        TextView subjectNameTextView, gradeTextView, numberOfTasksTextView, listNameTextView;
 
         public TaskListViewHolder(@NonNull View itemView) {
             super(itemView);
             subjectNameTextView = itemView.findViewById(R.id.subjectNameTextView);
             gradeTextView = itemView.findViewById(R.id.gradeTextView);
             numberOfTasksTextView = itemView.findViewById(R.id.numberOfTasksTextView);
+            listNameTextView = itemView.findViewById(R.id.listNameTextView);
         }
     }
 }

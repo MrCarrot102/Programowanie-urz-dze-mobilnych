@@ -2,15 +2,20 @@ package com.example.lista_3_pum;
 
 public class TaskList {
     private String subjectName;
-    private String grade;
+    private double  grade;
     private int numberOfTasks;
+    private int listNumber;
 
-    public TaskList(String subjectName, String grade, int numberOfTasks){
+    public TaskList(String subjectName, int list, double grade, int numberOfTasks){
         this.subjectName = subjectName;
         this.grade = grade;
         this.numberOfTasks = numberOfTasks;
+        this.listNumber = list;
+
     }
     public String getSubjectName() { return subjectName; }
-    public String getGrade() { return grade; }
+    public double getGrade() { return grade; }
+    public int getListNumber() { return listNumber; }
     public int getNumberOfTasks() { return numberOfTasks; }
+
 }

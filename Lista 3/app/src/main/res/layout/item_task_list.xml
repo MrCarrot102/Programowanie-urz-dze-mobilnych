@@ -1,35 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/rounded_background"
+    android:orientation="vertical"
+    android:padding="16dp"
+
+    android:background="?android:attr/selectableItemBackground"
     android:layout_marginBottom="8dp">
 
-    <TextView
-        android:id="@+id/subjectNameTextView"
-        android:layout_width="wrap_content"
+    <!-- Row containing Subject Name and List Number -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Subject"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp" />
+        android:orientation="horizontal"
+        android:gravity="start|center_vertical">
 
-    <TextView
-        android:id="@+id/gradeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ocena: 5.0"
-        android:textSize="16sp"
-        android:layout_marginBottom="8dp"
-        android:textColor="@android:color/darker_gray"/>
+        <!-- Subject Name aligned to left -->
+        <TextView
+            android:id="@+id/subjectNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Matematyka"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
 
-    <TextView
-        android:id="@+id/numberOfTasksTextView"
-        android:layout_width="wrap_content"
+        <!-- List Number aligned to right -->
+        <TextView
+            android:id="@+id/listNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lista 1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <!-- Row containing Number of Tasks and Grade -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Liczba zadań: 10"
-        android:textSize="16sp"
-        android:textColor="@android:color/darker_gray"/>
+        android:orientation="horizontal"
+        android:gravity="start|center_vertical">
+
+        <!-- Number of Tasks aligned to left -->
+        <TextView
+            android:id="@+id/numberOfTasksTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Liczba zadań: 10"
+            android:textSize="14sp"
+            android:textColor="@android:color/black" />
+
+        <!-- Grade aligned to right -->
+        <TextView
+            android:id="@+id/gradeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ocena: 3.5"
+            android:textSize="14sp"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
 </LinearLayout>
