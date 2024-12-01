@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "lista_3_pum"
+rootProject.name = "My Application"
 include(":app")
  

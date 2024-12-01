@@ -1,4 +1,4 @@
-package com.example.lista_3_pum;
+package com.example.myapplication;
 
 import org.junit.Test;
 

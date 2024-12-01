@@ -2,31 +2,36 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation"
-    app:startDestination="@id/fragment1">
+    android:id="@+id/naviagtion"
+    app:startDestination="@id/fragmentE1">
 
     <fragment
-        android:id="@+id/fragment1"
-        android:name="com.example.lista_3_pum.E1Fragment"
-        android:label="fragment_a"
+        android:id="@+id/fragmentE1"
+        android:name="com.example.myapplication.E1Fragment"
+        android:label="fragment_e1"
         tools:layout="@layout/fragment_e1" >
         <action
-            android:id="@+id/action_fragment1_to_fragment2"
-            app:destination="@id/fragment2" >
-            <argument android:name="value"
-                app:argType="integer">
-            </argument>
-        </action>
+            android:id="@+id/action_fragmentE1_to_fragmentE3"
+            app:destination="@id/fragmentE3" />
     </fragment>
-
     <fragment
-        android:id="@+id/fragment2"
-        android:name="com.example.lista_3_pum.E2Fragment"
-        android:label="fragment_b"
-        tools:layout="@layout/fragment_e2" >
+        android:id="@+id/fragmentE2"
+        android:name="com.example.myapplication.E2Fragment"
+        android:label="fragment_e2"
+        tools:layout="@layout/fragment_e2" />
+    <fragment
+        android:id="@+id/fragmentE3"
+        android:name="com.example.myapplication.E3Fragment"
+        android:label="fragment_e3"
+        tools:layout="@layout/fragment_e3" >
+        <argument
+            android:name="selectedTask"
+            app:argType="integer" />
         <action
-            android:id="@+id/action_fragment2_to_fragment1"
-            app:destination="@id/fragment1" />
+            android:id="@+id/action_fragmentE3_to_fragmentE2"
+            app:destination="@id/fragmentE2" />
+        <action
+            android:id="@+id/action_fragmentE3_to_fragmentE1"
+            app:destination="@id/fragmentE1" />
     </fragment>
-
 </navigation>

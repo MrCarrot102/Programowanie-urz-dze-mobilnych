@@ -3,17 +3,23 @@ plugins {
 }
 
 android {
-    namespace = "com.example.lista_3_pum"
+    namespace = "com.example.myapplication"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.lista_3_pum"
+        applicationId = "com.example.myapplication"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    viewBinding{
+        enable = true
+    }
+    dataBinding {
+        enable = true
     }
 
     buildTypes {
@@ -32,6 +38,7 @@ android {
 }
 
 dependencies {
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
