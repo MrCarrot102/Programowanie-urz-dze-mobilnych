@@ -1,29 +1,24 @@
-package com.example.myapplication.Models;
+package com.example.lista_3_pum.Exercise;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
 import java.util.List;
 
 public class ExerciseList implements Parcelable {
+    private List<Exercise> exercises;
+    private Subject subject;
+    private float grade;
 
-    private final List<Exercise> exercises;
-    private final String subject;
-    private final float grade;
-    private final String name;
-
-    public ExerciseList(List<Exercise> exercises, String subject, float grade, String name) {
+    public ExerciseList(List<Exercise> exercises, Subject subject, float grade) {
         this.exercises = exercises;
         this.subject = subject;
         this.grade = grade;
-        this.name = name;
     }
 
     protected ExerciseList(Parcel in) {
         exercises = in.createTypedArrayList(Exercise.CREATOR);
-        subject = in.readString();
+        subject = in.readParcelable(Subject.class.getClassLoader());
         grade = in.readFloat();
-        name = in.readString();
     }
 
     public static final Creator<ExerciseList> CREATOR = new Creator<ExerciseList>() {
@@ -42,7 +37,7 @@ public class ExerciseList implements Parcelable {
         return exercises;
     }
 
-    public String getSubject() {
+    public Subject getSubject() {
         return subject;
     }
 
@@ -50,21 +45,15 @@ public class ExerciseList implements Parcelable {
         return grade;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeTypedList(exercises);
+        dest.writeParcelable(subject, flags);
+        dest.writeFloat(grade);
     }
 
     @Override
     public int describeContents() {
         return 0;
     }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeTypedList(exercises);
-        dest.writeString(subject);
-        dest.writeFloat(grade);
-        dest.writeString(name);
-    }
-
 }

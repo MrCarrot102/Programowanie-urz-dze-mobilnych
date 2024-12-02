@@ -1,22 +1,18 @@
-package com.example.myapplication.Models;
+package com.example.lista_3_pum.Exercise;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Exercise implements Parcelable {
+    private String content;
+    private int points;
 
-    private final String name;
-    private final String content;
-    private final int points;
-
-    public Exercise(String name, String content, int points) {
-        this.name = name;
+    public Exercise(String content, int points) {
         this.content = content;
         this.points = points;
     }
 
     protected Exercise(Parcel in) {
-        name = in.readString();
         content = in.readString();
         points = in.readInt();
     }
@@ -33,10 +29,6 @@ public class Exercise implements Parcelable {
         }
     };
 
-    public String getName() {
-        return name;
-    }
-
     public String getContent() {
         return content;
     }
@@ -46,15 +38,13 @@ public class Exercise implements Parcelable {
     }
 
     @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(name);
         dest.writeString(content);
         dest.writeInt(points);
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
 }

@@ -3,23 +3,20 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapplication"
+    namespace = "com.example.lista_3_pum"
     compileSdk = 34
+    viewBinding{
+        enable = true
+    }
 
     defaultConfig {
-        applicationId = "com.example.myapplication"
+        applicationId = "com.example.lista_3_pum"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-    viewBinding{
-        enable = true
-    }
-    dataBinding {
-        enable = true
     }
 
     buildTypes {
@@ -38,6 +35,8 @@ android {
 }
 
 dependencies {
+    implementation("androidx.navigation:navigation-fragment:2.8.3")
+    implementation("androidx.navigation:navigation-ui:2.8.3")
 
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -45,6 +44,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(libs.play.services.mlkit.subject.segmentation)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
