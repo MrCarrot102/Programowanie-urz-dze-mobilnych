@@ -16,7 +16,7 @@ public class FragmentA extends Fragment {
     public FragmentA() {
         // Required empty public constructor
     }
-
+    // co to jest fragment, do czego jest 6 elementow 3 konstruktory i 3 destruktory
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

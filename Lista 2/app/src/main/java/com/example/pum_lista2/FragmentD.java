@@ -22,7 +22,7 @@ public class FragmentD extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentDBinding.inflate(inflater, container, false);
 
-        String username = getArguments() != null ? getArguments().getString("username") : "Nieznany użytkownik";
+        String username = getArguments().getString("username");
         // wyswietlanie nazwy uzytkownika po zalogowaniu
         binding.welcomeText.setText("Witaj, " + username);
 

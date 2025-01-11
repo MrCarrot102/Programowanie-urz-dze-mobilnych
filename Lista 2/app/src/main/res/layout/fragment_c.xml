@@ -14,7 +14,7 @@
         android:textSize="24sp"
         android:layout_gravity="center_horizontal"
         android:paddingBottom="20dp" />
-
+// co to boundle,
     <EditText
         android:id="@+id/loginUsername"
         android:layout_width="match_parent"

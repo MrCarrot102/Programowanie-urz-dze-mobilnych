@@ -1,13 +1,13 @@
 package com.example.pum_lista2;
 import java.util.ArrayList;
 import java.util.List;
-
 public class UserManager {
+    private static UserManager instance;
     private List<User> users;
 
-    public UserManager() {
+    private UserManager() {
         users = new ArrayList<>();
-        // 5 przykladowych uzytkownikow
+        // Dodaj pięciu domyślnych użytkowników
         users.add(new User("user1", "password1"));
         users.add(new User("user2", "password2"));
         users.add(new User("user3", "password3"));
@@ -15,10 +15,17 @@ public class UserManager {
         users.add(new User("user5", "password5"));
     }
 
+    public static UserManager getInstance() {
+        if (instance == null) {
+            instance = new UserManager();
+        }
+        return instance;
+    }
+
     public boolean addUser(String username, String password) {
         for (User user : users) {
             if (user.getUsername().equals(username)) {
-                return false; // użytkownik już istnieje
+                return false; // Użytkownik już istnieje
             }
         }
         users.add(new User(username, password));
@@ -34,3 +41,4 @@ public class UserManager {
         return false;
     }
 }
+

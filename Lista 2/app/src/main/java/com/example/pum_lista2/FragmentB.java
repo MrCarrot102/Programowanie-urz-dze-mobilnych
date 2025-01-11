@@ -15,7 +15,7 @@ public class FragmentB extends Fragment {
     private FragmentBBinding binding;
 
     public FragmentB() {
-        // Required empty public constructor
+        // Wymagany pusty konstruktor publiczny
     }
 
     @Override
@@ -23,20 +23,22 @@ public class FragmentB extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentBBinding.inflate(inflater, container, false);
 
-        // przycisk do rejestracji uzytkownika
+        // przycisk do rejestracji użytkownika
         binding.registerButton.setOnClickListener(view -> {
             String username = binding.registerUsername.getText().toString();
             String password = binding.registerPassword.getText().toString();
             String confirmPassword = binding.registerConfirmPassword.getText().toString();
 
-            if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-                Toast.makeText(getActivity(), "Wypełnij wszystkie pola", Toast.LENGTH_SHORT).show();
-            } else if (!password.equals(confirmPassword)) {
-                Toast.makeText(getActivity(), "Hasła nie pasują", Toast.LENGTH_SHORT).show();
-            } else {
-                // przejscie do ekranu logowania
-                NavDirections action = FragmentBDirections.actionFragmentBToFragmentC();
-                Navigation.findNavController(view).navigate(action);
+            if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {}
+            else {
+                // pobranie instancji UserManager i dodanie nowego użytkownika
+                UserManager userManager = UserManager.getInstance(); // założenie, że UserManager jest singletonem
+
+                boolean isAdded = userManager.addUser(username, password);
+                if (isAdded) {
+                    NavDirections action = FragmentBDirections.actionFragmentBToFragmentC();
+                    Navigation.findNavController(view).navigate(action);
+                }
             }
         });
 
