@@ -7,7 +7,7 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-
+import com.example.maslolot.model.Bullet
 import com.example.maslolot.model.Enemy
 import com.example.maslolot.model.Player
 import com.example.maslolot.ui.components.*
@@ -15,7 +15,14 @@ import com.example.maslolot.ui.components.*
 @Composable
 fun GameScreen() {
     val playerState = remember { mutableStateOf(Player(x = 100f, y = 400f, speed = 10f)) }
-    val enemies = remember { mutableStateListOf(Enemy(x = 50f, y = 0f, speed = 2f)) }
+    val enemies = remember {
+        mutableStateListOf(
+            Enemy(x = 50f, y = 0f, speed = 2f),
+            Enemy(x = 150f, y = -100f, speed = 2.5f)
+        )
+    }
+    val bullets = remember { mutableStateListOf<Bullet>() }
+    val score = remember { mutableStateOf(0) }
 
     Box(modifier = Modifier.fillMaxSize()) {
         BackgroundComposable()
@@ -28,9 +35,11 @@ fun GameScreen() {
                 )
             }
         )
-        Enemycomposable(enemies = enemies)
-        ScoreboardComposable(score = 0)
+        EnemyComposable(enemies = enemies)
+        BulletComposable(bullets = bullets)
+        ScoreboardComposable(score = score.value)
+
+        // Update game state
+        // Move enemies and detect collisions in a separate composable or effect
     }
 }
-
-
