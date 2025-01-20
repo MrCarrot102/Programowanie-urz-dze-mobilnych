@@ -19,7 +19,7 @@ fun BulletComposable(bullets: List<Bullet> = listOf()){
             modifier = Modifier
                 .offset(x = bullet.x.dp, y = bullet.y.dp)
                 .background(Color.Red, CircleShape)
-                .size(8.dp)
+                .size(25.dp)
         )
     }
 }

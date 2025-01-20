@@ -19,7 +19,7 @@ fun EnemyComposable(enemies: List<Enemy> = listOf()){
             contentDescription = "Enemy",
             modifier = Modifier
                 .offset(x = enemy.x.dp, y = enemy.y.dp)
-                .size(48.dp)
+                .size(80.dp)
         )
     }
 }
