@@ -1,7 +1,7 @@
 https://github.com/user-attachments/assets/79d65cee-14bc-4771-b181-ff232f6a8de3
 
 Polish:
-Maslolot to wczesna wersja naszej mobilnej gry, w której gracze wkraczają do niezwykłego świata owadów pełnego akcji i humoru. Obecna wersja oferuje podstawową rozgrywkę, a w planach mamy:
+Maslolot to wczesna wersja naszej mobilnej gry, w której gracze wkraczają do niezwykłego świata owadów pełnego akcji i humoru. Obecna wersja oferuje podstawową rozgrywkę, a w planach mam:
 
 Dodanie kilku grywalnych postaci, które wprowadzą różnorodność do rozgrywki.
 Dynamiczną zmianę poziomu trudności w zależności od czasu spędzonego w grze.
@@ -15,7 +15,7 @@ Dlaczego motyl strzela kulami ognia?
 Motyle posiadły starożytną umiejętność panowania nad żywiołem ognia – kto wie, może w przyszłości nauczą się również władania lodem?
 
 English:
-Maslolot is an early version of our mobile game that brings players into a quirky and action-packed world of insects. The current version offers basic gameplay, and here’s what we’re planning for future updates:
+Maslolot is an early version of our mobile game that brings players into a quirky and action-packed world of insects. The current version offers basic gameplay, and here’s what i'm planning for future updates:
 
 Adding multiple playable characters to diversify the gameplay.
 Introducing dynamic difficulty adjustments based on in-game time.
