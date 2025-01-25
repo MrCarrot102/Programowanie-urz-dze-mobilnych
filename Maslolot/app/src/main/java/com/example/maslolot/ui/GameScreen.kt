@@ -13,6 +13,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.navigation.NavHostController
 import com.example.maslolot.model.Bullet
 import com.example.maslolot.model.Enemy
+import com.example.maslolot.model.GameState
 import com.example.maslolot.model.Player
 import com.example.maslolot.ui.components.*
 import kotlinx.coroutines.delay
