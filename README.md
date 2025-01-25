@@ -15,12 +15,13 @@ Dlaczego motyl strzela kulami ognia?
 Motyle posiadły starożytną umiejętność panowania nad żywiołem ognia – kto wie, może w przyszłości nauczą się również władania lodem?
 
 English:
-Maslolot is an early version of our mobile game that brings players into a quirky and action-packed world of insects. The current version offers basic gameplay, and here’s what i'm planning for future updates:
+Maslolot is an early version of my mobile game that brings players into a quirky and action-packed world of insects. The current version offers basic gameplay, and here’s what i'm planning for future updates:
 
 Adding multiple playable characters to diversify the gameplay.
 Introducing dynamic difficulty adjustments based on in-game time.
 Implementing power-ups to make the game more engaging and give players an edge.
 Enhancing graphics to make the world of Maslolot even more immersive.
+
 Why are beetles falling from the sky?
 The beetles have mastered the art of flying and decided to team up to challenge the butterflies.
 
