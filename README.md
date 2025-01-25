@@ -1,7 +1,7 @@
 https://github.com/user-attachments/assets/79d65cee-14bc-4771-b181-ff232f6a8de3
 
 Polish:
-Maslolot to wczesna wersja naszej mobilnej gry, w której gracze wkraczają do niezwykłego świata owadów pełnego akcji i humoru. Obecna wersja oferuje podstawową rozgrywkę, a w planach mam:
+Maslolot to wczesna wersja mojej mobilnej gry, w której gracze wkraczają do niezwykłego świata owadów pełnego akcji i humoru. Obecna wersja oferuje podstawową rozgrywkę, a w planach mam:
 
 Dodanie kilku grywalnych postaci, które wprowadzą różnorodność do rozgrywki.
 Dynamiczną zmianę poziomu trudności w zależności od czasu spędzonego w grze.
