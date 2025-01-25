@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- FragmentE1: Task List -->
+    <item
+        android:id="@+id/fragmentE1"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Task List" />
+
+    <!-- FragmentE2: Grades -->
+    <item
+        android:id="@+id/fragmentE2"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Grades" />
+
+</menu>
