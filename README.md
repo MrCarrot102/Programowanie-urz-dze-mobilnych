@@ -1,3 +1,8 @@
-https://github.com/user-attachments/assets/c05606d2-5bc5-43e4-9542-7546db95abca
-Uploading Maslolot.mp4…
+https://github.com/user-attachments/assets/79d65cee-14bc-4771-b181-ff232f6a8de3
 
+Wczesna wersja gry mobilnej Maslolot;
+W planach: 
+  dodanie kilku grywalnych postaci; 
+  zmiana poziomu trudności w zależności od czasu w grze; 
+  dodanie power upów; 
+  ulepszenie grafiki :); 
